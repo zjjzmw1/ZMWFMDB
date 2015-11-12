@@ -4,7 +4,7 @@
 //
 //  Created by Tianyu on 15/3/11.
 //  Copyright (c) 2015年 Beijing Beast Technology Co.,Ltd. All rights reserved.
-//
+//  用的时候导入FMDB
 
 #import <Foundation/Foundation.h>
 #import "FMDataBase.h"
