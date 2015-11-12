@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FMDatabase.h"
-#import "DefineFragments.h"
+//#import "FMDatabase.h"
+//#import "DefineFragments.h"
 @interface ActivityManager : NSObject
 
-@property(nonatomic, assign)BOOL    isUpdate;
+//@property(nonatomic, assign)BOOL    isUpdate;
 
-instance_interface(ActivityManager, defaultManager)
+//instance_interface(ActivityManager, defaultManager)
 
 /**
  *  @brief 查询一条骑行记录是否已在本地存在

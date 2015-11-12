@@ -7,17 +7,17 @@
 //
 
 #import "ActivityManager.h"
-#import "DataBaseManager.h"
+//#import "DataBaseManager.h"
 @implementation ActivityManager
 
-instance_implementation(ActivityManager, defaultManager)
+//instance_implementation(ActivityManager, defaultManager)
 
-- (id)init{
-    if(self = [super init]){
-        
-    }
-    return self;
-}
+//- (id)init{
+//    if(self = [super init]){
+//        
+//    }
+//    return self;
+//}
 
 #pragma mark - 判断一条记录是否存在
 //
