@@ -7,32 +7,32 @@
 //  用的时候导入FMDB
 
 #import <Foundation/Foundation.h>
-#import "FMDataBase.h"
-#import "FMDatabaseQueue.h"
-#import "DefineFragments.h"     //单例、文件目录、NSLog的宏。
+//#import "FMDataBase.h"
+//#import "FMDatabaseQueue.h"
+//#import "DefineFragments.h"     //单例、文件目录、NSLog的宏。
 @interface DataBaseManager : NSObject
 
-@property(nonatomic, strong) FMDatabase*           database;
-
-@property(nonatomic, strong) FMDatabaseQueue*      databaseQueue;
-///数据库相关的子线程----相关操作都放在这个子线程中-----崩溃容易查找问题。
-@property(nonatomic, strong) dispatch_queue_t      databaseSyncQueue;
-
-instance_interface(DataBaseManager, defaultManager)
-///数据库相关操作放在这个的子线程里。
-/**
- *  dispatch_async([DataBaseManager syncDatabaseQueue], ^{
- 
- });
- */
-+ (dispatch_queue_t)syncDatabaseQueue;
-
-/**
- *  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
- [DataBaseManager syschronizeDBFile];
- */
-///同步数据库文件。启动应用的时候放在子线程里面执行下。第一次安装新建DB。
-+ (void)syschronizeDBFile;
+//@property(nonatomic, strong) FMDatabase*           database;
+//
+//@property(nonatomic, strong) FMDatabaseQueue*      databaseQueue;
+/////数据库相关的子线程----相关操作都放在这个子线程中-----崩溃容易查找问题。
+//@property(nonatomic, strong) dispatch_queue_t      databaseSyncQueue;
+//
+//instance_interface(DataBaseManager, defaultManager)
+/////数据库相关操作放在这个的子线程里。
+///**
+// *  dispatch_async([DataBaseManager syncDatabaseQueue], ^{
+// 
+// });
+// */
+//+ (dispatch_queue_t)syncDatabaseQueue;
+//
+///**
+// *  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+// [DataBaseManager syschronizeDBFile];
+// */
+/////同步数据库文件。启动应用的时候放在子线程里面执行下。第一次安装新建DB。
+//+ (void)syschronizeDBFile;
 
 
 @end
